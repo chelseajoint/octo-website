@@ -1,14 +1,17 @@
 // Footer.js
 import React from 'react';
+import techcrunch from '../../resource/techcrunch.svg';
+import forbes from '../../resource/forbes.svg';
+import wsj from '../../resource/wsj.svg';
 
 const Footer = () => {
   return (
     <footer>
-      <img src='./resource/' alt='as seen on'/>
+      <img src='/resource/' alt='as seen on'/>
       <div className='logos'>
-        <img src='./resource/techcrunch.svg' alt='logo techcrunch'/>
-        <img src='./resource/forbs.svg' alt='logo forbs'/>
-        <img src='./resource/wsj.svg' alt='logo wsj'/>
+        <img src={techcrunch} alt='logo techcrunch'/>
+        <img src={forbes} alt='logo forbs'/>
+        <img src={wsj} alt='logo wsj'/>
       </div>
     </footer>
   );
