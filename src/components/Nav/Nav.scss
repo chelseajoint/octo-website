@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+nav {
+    @include displayFlexCenter;
+
+    .logo {
+        width: 172px;
+        height: auto;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+    
+        li {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+}

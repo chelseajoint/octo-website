@@ -4,6 +4,8 @@ import Nav from '../Nav/Nav';
 import Auth from '../Auth/Auth';
 import logo from '../../resource/octo.svg'
 
+import './Header.scss';
+
 const Header = ({ navItems }) => {
   return (
     <header>

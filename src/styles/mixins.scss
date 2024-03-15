@@ -1,0 +1,10 @@
+@mixin baseFontStyle {
+    font-family: $bodyFontFamily;
+    font-weight: $baseFontWeight;
+    font-size: $baseFontStyle;
+}
+
+@mixin displayFlexCenter {
+    display: flex;
+    align-items: center;
+}

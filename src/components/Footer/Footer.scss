@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+footer {
+    margin-top: 220px;
+
+    p {
+        color: $white;
+        font-size: $font-size-25;
+        font-weight: $font-weight-7;
+    }
+
+    .logos {
+        @include displayFlexCenter;
+        justify-content: space-between;
+        width: 650px;
+        margin-top: 60px;
+
+        img {
+            height: 20px;
+        }
+    }
+}

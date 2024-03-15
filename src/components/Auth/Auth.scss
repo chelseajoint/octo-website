@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+
+.auth {
+    @include displayFlexCenter;
+
+    .get {
+        margin-left: 30px;
+        background-color: $green04;
+        padding: 15px 30px;
+    }
+}

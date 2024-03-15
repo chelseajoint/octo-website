@@ -4,10 +4,12 @@ import techcrunch from '../../resource/techcrunch.svg';
 import forbes from '../../resource/forbes.svg';
 import wsj from '../../resource/wsj.svg';
 
+import './Footer.scss';
+
 const Footer = () => {
   return (
     <footer>
-      <img src='/resource/' alt='as seen on'/>
+      <p>As seen on!</p>
       <div className='logos'>
         <img src={techcrunch} alt='logo techcrunch'/>
         <img src={forbes} alt='logo forbs'/>
