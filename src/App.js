@@ -3,6 +3,9 @@ import ApiService from './services/ApiService';
 import DOMPurify from 'dompurify';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Button from './components/Button/Button';
+
+import './App.scss';
 
 const App = () => {
   const [navItems, setNavItems] = useState([]);
@@ -28,8 +31,14 @@ const App = () => {
     return cleanedHtml === htmlString;
   };
 
+  const handleCta = () => {
+    console.log('handleCta')
+  };
+
   return (
-    <div className="container">
+    <div className='app'>
+      <div className='background'></div>
+      <div className="container">
       <Header navItems={navItems}/>
       <div className="content">
       {isSafeHtml(homeData['header-title']) ? (
@@ -37,9 +46,10 @@ const App = () => {
         ) : (
           <h1>No se puede mostrar el contenido de forma segura.</h1>
         )}
-      <button>{homeData['header-cta']}</button>
+      <Button name="cta" title={homeData['header-cta']} onClick={handleCta} />
       </div>
       <Footer />
+    </div>
     </div>
   );
 };
