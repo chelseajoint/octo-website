@@ -6,3 +6,9 @@ header {
     @include displayFlexCenter;
     justify-content: space-between;
 }
+
+@media (max-width: 767.98px) {
+    header {
+        height: 20vw;
+    }
+  }

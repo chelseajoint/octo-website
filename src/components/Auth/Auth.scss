@@ -9,3 +9,24 @@
         padding: 15px 30px;
     }
 }
+
+@media (max-width: 767.98px) {
+    .auth {
+        .get {
+            margin-left: 3vw;
+            margin-right: -12vw;
+            background-color: $pink;
+            color: $green04;
+            padding: 3vw 5vw;
+
+            &:hover {
+                color: $yellow;
+            }
+        
+            &:active {
+                background-color: $pink;
+                opacity: .9;
+            }
+        }
+    }
+  }

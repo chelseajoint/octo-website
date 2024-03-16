@@ -16,3 +16,9 @@ button {
         color: $pink;
     }
 }
+
+@media (max-width: 767.98px) {
+    button {
+        font-size: $font-size-mobile;
+    }
+  }

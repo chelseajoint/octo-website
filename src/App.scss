@@ -10,15 +10,15 @@ body, html {
     @include baseFontStyle;
     @include displayFlexCenter; 
     flex-direction: column;
-}
 
-.background{
-    width: 2300px;
-    height: 1200px;
-    background-image: url('../src/resource/bg.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    }
+    .background{
+        width: 2300px;
+        height: 1200px;
+        background-image: url('../src/resource/bg.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+}
 
 .container {
     width: 1280px;
@@ -36,9 +36,12 @@ body, html {
             margin-bottom: 55px;
 
             .title-accent {
-                color: $pink;
-                font-weight: $font-weight-7;
+                @include title-accent;
             }
+        }
+
+        .offert {
+            display: none;
         }
 
         .cta {
@@ -65,3 +68,76 @@ body, html {
     }
 
 }
+
+@media (max-width: 767.98px) {
+    .app {
+        .background{
+            width: 100vw;
+            height: 182vw;
+            background-position: top;
+            background-image: url('./resource/bgMob.svg');
+            }
+
+        .container {
+            width: 100vw;
+            height: 182vw;
+            margin-top: -182vw;
+            padding-left: 15vw;
+            padding-right: 15vw;
+            box-sizing: border-box;
+
+            .content {
+                width: 74vw;
+        
+                h1 {
+                    font-size: $font-size-mobile-title;
+                    margin-top: 8vw;
+                    margin-left: -1vw;
+                    margin-bottom: 0;
+                }
+
+                .offert {
+                    display: block;
+                    margin-top: 4.9vw;
+                    color: $yellow;
+
+                    h3 {
+                        font-size: $font-size-mobile-h3;
+                        font-weight: $font-weight-3;
+                    }
+
+                    h2 {
+                        margin-top: -4.5vw;
+                        font-size: $font-size-mobile-h2;
+
+                        .title-accent {
+                            @include title-accent;
+                            text-transform: uppercase;
+                            font-size: $font-size-mobile-accent;
+                            margin-left: -1.5vw;
+                        }
+                    }
+                }
+        
+                .cta {
+                    font-size: $font-size-mobile-h3;
+                    padding: 3.5vw 5vw 3.5vw 12vw;
+                    box-shadow: 1.5vw 1.5vw 0 #d2abe4;
+                    background-size: 11vw;
+
+                    &:hover {
+                        transform: translateY(0) translateX(0);
+                        padding: 3.5vw 5vw 3.5vw 12vw;
+                        box-shadow: 1.5vw 1.5vw 0 #d2abe4;
+                    }
+        
+                    &:active {
+                        transform: translateY(1.5vw) translateX(1.5vw);
+                        box-shadow: 0 0 0 transparent;
+                    }
+                }
+            }
+        }
+    }
+
+  }

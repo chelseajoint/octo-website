@@ -20,3 +20,26 @@ footer {
         }
     }
 }
+
+@media (max-width: 767.98px) {
+    footer {
+        margin-top: 55.5vw;
+        margin-left: -10vw;
+        
+        p {
+            color: $pink;
+            font-size: $font-size-mobile-footer;
+        }
+
+        .logos {
+            width: 90vw;
+            margin-top: 11vw;
+
+            img {
+                height: 3.2vw;
+            }
+        }
+
+
+    }
+  }
