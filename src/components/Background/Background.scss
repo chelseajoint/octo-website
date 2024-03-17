@@ -2,6 +2,11 @@
 
 .background {
   position: relative;
+
+  canvas {
+    width: 100vw;
+    height: 75vw;
+  }
 }
 
 .backgroundBox {
@@ -15,8 +20,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .front.color01 {
-    fill: $green04;
-  }
+  border-radius: 2vw;
 }

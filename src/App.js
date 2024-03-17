@@ -39,7 +39,6 @@ const App = () => {
   return (
     <div className='app'>
       <Background />
-      {/* <div className='background'></div> */}
       <div className="container">
       <Header navItems={navItems}/>
       <div className="content">
