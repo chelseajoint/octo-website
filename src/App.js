@@ -4,6 +4,7 @@ import DOMPurify from 'dompurify';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Button from './components/Button/Button';
+import Background from './components/Background/Background';
 
 import './App.scss';
 
@@ -37,7 +38,8 @@ const App = () => {
 
   return (
     <div className='app'>
-      <div className='background'></div>
+      <Background />
+      {/* <div className='background'></div> */}
       <div className="container">
       <Header navItems={navItems}/>
       <div className="content">

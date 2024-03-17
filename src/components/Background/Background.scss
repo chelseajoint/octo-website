@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.background {
+  position: relative;
+}
+
+.backgroundBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 65vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .front.color01 {
+    fill: $green04;
+  }
+}
