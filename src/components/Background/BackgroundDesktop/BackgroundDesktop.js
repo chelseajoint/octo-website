@@ -1,7 +1,7 @@
-// BagroundDraw.js
+// BagroundDesktop.js
 import React, { useEffect, useRef } from 'react';
 
-const BackgroundDraw = ({ color01, color02, color03 }) => {
+const BagroundDesktop = ({ color01, color02, color03 }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -35,9 +35,9 @@ const BackgroundDraw = ({ color01, color02, color03 }) => {
 
     ctx.lineTo(canvasWidth * .5, canvasHeight * .2);
     ctx.lineTo(canvasWidth * .5, canvasHeight * .8);
-    ctx.lineTo(canvasWidth * .7, canvasHeight * 1);
-    ctx.lineTo(canvasWidth * 1, canvasHeight * 1);
-    ctx.lineTo(canvasWidth * 1, 0);
+    ctx.lineTo(canvasWidth * .7, canvasHeight);
+    ctx.lineTo(canvasWidth, canvasHeight);
+    ctx.lineTo(canvasWidth, 0);
 
     ctx.closePath();
 
@@ -50,8 +50,8 @@ const BackgroundDraw = ({ color01, color02, color03 }) => {
     ctx.moveTo(0, canvasHeight * .8);
 
     ctx.lineTo(canvasWidth * .5, canvasHeight * .8);
-    ctx.lineTo(canvasWidth * .7, canvasHeight * 1);
-    ctx.lineTo(0, canvasHeight * 1);
+    ctx.lineTo(canvasWidth * .7, canvasHeight);
+    ctx.lineTo(0, canvasHeight);
     ctx.closePath();
 
     ctx.fill();
@@ -61,4 +61,4 @@ const BackgroundDraw = ({ color01, color02, color03 }) => {
   return <canvas ref={canvasRef}></canvas>;
 };
 
-export default BackgroundDraw;
+export default BagroundDesktop;
