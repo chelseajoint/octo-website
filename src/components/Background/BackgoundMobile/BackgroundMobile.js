@@ -1,8 +1,7 @@
-// BackgroundMobile.js
+// BagroundMobile.js
 import React, { useEffect, useRef, useState } from 'react';
 
-const backgroundImage = new Image();
-backgroundImage.src = '../../../resource/img.png';
+import backgroundImage from '../../../resource/img.png';
 
 const BackgroundMobile = ({ color01, color02, color03, color04 }) => {
   const canvasRef = useRef(null);
@@ -16,6 +15,12 @@ const BackgroundMobile = ({ color01, color02, color03, color04 }) => {
     const canvasHeight = window.innerWidth * .01 * 180;
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
+
+    const image = new Image();
+    image.src = backgroundImage;
+    image.onload = () => {
+      setImageLoaded(true);
+    };
 
     const drawBackground = () => {
       // 01
@@ -40,7 +45,7 @@ const BackgroundMobile = ({ color01, color02, color03, color04 }) => {
   
       // 03
       if (imageLoaded) {
-        ctx.drawImage(backgroundImage, canvasWidth * .35, canvasHeight * .5, canvasWidth * .65, canvasHeight * .42);
+        ctx.drawImage(image, canvasWidth * .35, canvasHeight * .5, canvasWidth * .65, canvasHeight * .42);
       }
   
       // 04
@@ -63,17 +68,8 @@ const BackgroundMobile = ({ color01, color02, color03, color04 }) => {
       ctx.fill();
     };
 
-    // img
-     const handleImageLoad = () => {
-      setImageLoaded(true);
-      drawBackground();
-    };
+    drawBackground();
 
-    backgroundImage.onload = handleImageLoad;
-
-    return () => {
-      backgroundImage.onload = null;
-    };
   }, [imageLoaded]);
 
   return <canvas ref={canvasRef}></canvas>;

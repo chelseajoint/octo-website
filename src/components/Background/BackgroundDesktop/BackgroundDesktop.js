@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import backgroundImage from '../../../resource/img.png';
 
-const BackgroundDesktop = ({ color01, color02, color03, useImage }) => {
+const BackgroundDesktop = ({ color01, color02, color03, color04, color06, useImage }) => {
   const canvasRef = useRef(null);
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -47,13 +47,36 @@ const BackgroundDesktop = ({ color01, color02, color03, useImage }) => {
 
       ctx.fill();
 
+      if (useImage) {
       // 03
-      if (imageLoaded && useImage) {
-        ctx.drawImage(image, canvasWidth * .5, canvasHeight * .24, canvasWidth * .46, canvasHeight * .7);
-      }
+      ctx.fillStyle = color03;
+      ctx.beginPath();
+      ctx.rect(canvasWidth * .45, canvasHeight * .15, canvasWidth * .05, canvasHeight * .2);
+      ctx.fill();
 
       // 04
-      ctx.fillStyle = color03;
+      ctx.fillStyle = color04;
+      
+      ctx.beginPath();
+      ctx.moveTo(canvasWidth * .5, canvasHeight * .15);
+
+      ctx.lineTo(canvasWidth * .69, canvasHeight * .15);
+      ctx.lineTo(canvasWidth * .75, canvasHeight * .23);
+      ctx.lineTo(canvasWidth * .75, canvasHeight * .35);
+      ctx.lineTo(canvasWidth * .5, canvasHeight * .35);
+
+      ctx.closePath();
+
+      ctx.fill();
+
+      // 05
+      if (imageLoaded) {
+        ctx.drawImage(image, canvasWidth * .5, canvasHeight * .24, canvasWidth * .46, canvasHeight * .7);
+      }
+      }
+
+      // 06
+      ctx.fillStyle = color06;
       
       ctx.beginPath();
       ctx.moveTo(0, canvasHeight * .8);
