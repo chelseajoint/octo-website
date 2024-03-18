@@ -12,12 +12,12 @@ const Background = () => {
     return (
       <div className='background'>
         {isMobile ? (
-          <BackgroundMobile color01='#474e21' color02='#d2abe4' color03='#e4eac3' color04='#bec789' />
+          <BackgroundMobile color01='#474e21' color02='#d2abe4' color03='#e4ebc4' color04='#bec789' />
         ) : (
           <>
-            <BackgroundDesktop color01='#e4eac3' color02='#dce5a3' color03='#bec789' />
+            <BackgroundDesktop color01='#e4ebc4' color02='#dce5a3' color03='#bec789' useImage={false} />
             <div className='backgroundBox'>
-              <BackgroundDesktop className='front' color01='#474e21' color02='#d2abe4' color03='#e4eac3' />
+              <BackgroundDesktop className='front' color01='#474e21' color02='#d2abe4' color03='#e4eac3' useImage={true} />
             </div>
           </>
         )}
