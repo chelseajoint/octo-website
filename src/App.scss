@@ -6,18 +6,18 @@ body, html {
   }
 
 .app {
-    background-color: $green01;
+    // background-color: $green01;
     @include baseFontStyle;
     @include displayFlexCenter; 
     flex-direction: column;
 
-    .background{
-        width: 2300px;
-        height: 1200px;
-        background-image: url('../src/resource/bg.svg');
-        background-repeat: no-repeat;
-        background-position: center;
-        }
+    // .background{
+    //     width: 2300px;
+    //     height: 1200px;
+    //     background-image: url('../src/resource/bg.svg');
+    //     background-repeat: no-repeat;
+    //     background-position: center;
+    //     }
 }
 
 .container {
