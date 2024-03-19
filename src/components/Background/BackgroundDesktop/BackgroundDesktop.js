@@ -104,7 +104,7 @@ const BackgroundDesktop = ({ color01, color02, color03, color04, color06, useIma
       drawBackground();
     }
 
-  }, [useImage, imageLoaded]);
+  }, [color01, color02, color03, color04, color06, useImage, imageLoaded]);
 
   return <canvas ref={canvasRef}></canvas>;
 };

@@ -70,7 +70,7 @@ const BackgroundMobile = ({ color01, color02, color03, color04 }) => {
 
     drawBackground();
 
-  }, [imageLoaded]);
+  }, [color01, color02, color03, color04, imageLoaded]);
 
   return <canvas ref={canvasRef}></canvas>;
 };
