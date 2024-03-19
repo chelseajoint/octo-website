@@ -6,34 +6,26 @@ body, html {
   }
 
 .app {
-    // background-color: $green01;
     @include baseFontStyle;
     @include displayFlexCenter; 
     flex-direction: column;
-
-    // .background{
-    //     width: 2300px;
-    //     height: 1200px;
-    //     background-image: url('../src/resource/bg.svg');
-    //     background-repeat: no-repeat;
-    //     background-position: center;
-    //     }
 }
 
 .container {
-    width: 1280px;
-    height: 1024px;
-    margin-top: -1112px;
+    width: 80vw;
+    height: 75vw;
+    margin-top: -70vw;
+    z-index: 99;
 
     .content {
-        width: 600px;
+        width: 35vw;
 
         h1 {
             color: $yellow;
             font-weight: $font-weight-3;
-            font-size: $font-size-7;
-            margin-top: 110px;
-            margin-bottom: 55px;
+            font-size: $font-size-4;
+            margin-top: 10vw;
+            margin-bottom: 4vw;
 
             .title-accent {
                 @include title-accent;
@@ -41,17 +33,59 @@ body, html {
         }
 
         .offert {
-            display: none;
+            color: $green04;
+            position: absolute;
+            left: 51vw;
+            top: 15vw;
+
+            .coin {
+                background-color: $yellow;
+                width: 5.1vw;
+                height: 5vw;
+                border-radius: 5vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                font-weight: $font-weight-7;
+                font-size: $font-size-2;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: $font-size-4;
+                margin-top: -10vw;
+                margin-left: 3.3vw;
+
+                .title-accent {
+                    text-transform: uppercase;
+                    transform: rotate(-90deg);
+                    font-size: $font-size-17;
+                    display: inline-block;
+                    margin-left: -24.1vw;                
+                }
+            }
+
+            h3 {
+                margin-top: 2vw;
+                margin-bottom: 3vw;
+                font-size: $font-size-17;
+                margin-left: 3.5vw;
+                font-weight: 500;
+            }
         }
 
         .cta {
-            font-size: $font-size-25;
-            padding: 25px 35px 25px 85px;
+            font-size: 1.5vw;
+            font-weight: $font-weight-7;
+            padding: 2vw 3vw 2vw 7vw;
             background-image: url('./resource/imgCTA.png');
             background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: left;
             background-color: $yellow;
             color: $green04;
-            box-shadow: 10px 10px 0 $pink;
+            box-shadow: 0.5vw 0.5vw 0 $pink;
 
             &:hover {
                 transform: translateY(5px) translateX(5px);
@@ -71,19 +105,12 @@ body, html {
 
 @media (max-width: 767.98px) {
     .app {
-        .background{
-            width: 100vw;
-            height: 182vw;
-            background-position: top;
-            background-image: url('./resource/bgMob.svg');
-            }
-
         .container {
             width: 100vw;
-            height: 182vw;
-            margin-top: -182vw;
-            padding-left: 15vw;
-            padding-right: 15vw;
+            height: 180vw;
+            margin-top: -180vw;
+            padding-left: 14vw;
+            padding-right: 14vw;
             box-sizing: border-box;
 
             .content {
@@ -91,30 +118,37 @@ body, html {
         
                 h1 {
                     font-size: $font-size-mobile-title;
-                    margin-top: 8vw;
+                    margin-top: 2vw;
                     margin-left: -1vw;
                     margin-bottom: 0;
                 }
 
                 .offert {
-                    display: block;
-                    margin-top: 4.9vw;
+                    position: static;
+                    margin-top: 4.7vw;
                     color: $yellow;
 
+                    .coin {
+                        display: none;
+                    }
+                    
                     h3 {
+                        margin-top: 0;
+                        margin-left: 0;
                         font-size: $font-size-mobile-h3;
                         font-weight: $font-weight-3;
                     }
 
                     h2 {
                         margin-top: -4.5vw;
+                        margin-left: 0;
                         font-size: $font-size-mobile-h2;
 
                         .title-accent {
                             @include title-accent;
-                            text-transform: uppercase;
                             font-size: $font-size-mobile-accent;
                             margin-left: -1.5vw;
+                            transform: rotate(0);
                         }
                     }
                 }

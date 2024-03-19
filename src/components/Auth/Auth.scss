@@ -2,11 +2,12 @@
 
 .auth {
     @include displayFlexCenter;
+    padding-bottom: 0.5vw;
 
     .get {
-        margin-left: 30px;
+        margin-left: 2vw;
         background-color: $green04;
-        padding: 15px 30px;
+        padding: 1vw 2vw;
     }
 }
 
@@ -14,7 +15,7 @@
     .auth {
         .get {
             margin-left: 3vw;
-            margin-right: -12vw;
+            margin-right: -10vw;
             background-color: $pink;
             color: $green04;
             padding: 3vw 5vw;
