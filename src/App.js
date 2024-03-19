@@ -48,6 +48,7 @@ const App = () => {
           <h1>No se puede mostrar el contenido de forma segura.</h1>
         )}
       <div className='offert'>
+        <h3 className='coin'>$</h3>
         <h3>$10.99 / month</h3>
         <h2>500k <span className='title-accent'>covered</span></h2>
       </div>

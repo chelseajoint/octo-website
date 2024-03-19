@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import backgroundImage from '../../../resource/img.png';
 
-const BackgroundDesktop = ({ color01, color02, color03, color04, color06, useImage }) => {
+const BackgroundDesktop = ({ color01, color02, color03, color04, color05, color06, useImage }) => {
   const canvasRef = useRef(null);
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -51,32 +51,31 @@ const BackgroundDesktop = ({ color01, color02, color03, color04, color06, useIma
       // 03
       ctx.fillStyle = color03;
       ctx.beginPath();
-      ctx.rect(canvasWidth * .45, canvasHeight * .15, canvasWidth * .05, canvasHeight * .2);
+      ctx.rect(canvasWidth * .45, canvasHeight * .18, canvasWidth * .05, canvasHeight * .18);
       ctx.fill();
 
       // 04
       ctx.fillStyle = color04;
       
       ctx.beginPath();
-      ctx.moveTo(canvasWidth * .5, canvasHeight * .15);
+      ctx.moveTo(canvasWidth * .5, canvasHeight * .18);
 
-      ctx.lineTo(canvasWidth * .69, canvasHeight * .15);
-      ctx.lineTo(canvasWidth * .75, canvasHeight * .23);
-      ctx.lineTo(canvasWidth * .75, canvasHeight * .35);
-      ctx.lineTo(canvasWidth * .5, canvasHeight * .35);
+      ctx.lineTo(canvasWidth * .67, canvasHeight * .18);
+      ctx.lineTo(canvasWidth * .73, canvasHeight * .26);
+      ctx.lineTo(canvasWidth * .73, canvasHeight * .36);
+      ctx.lineTo(canvasWidth * .5, canvasHeight * .36);
 
       ctx.closePath();
 
       ctx.fill();
 
-      // 05
+      // img
       if (imageLoaded) {
         ctx.drawImage(image, canvasWidth * .5, canvasHeight * .24, canvasWidth * .46, canvasHeight * .7);
       }
-      }
 
-      // 06
-      ctx.fillStyle = color06;
+      // 05
+      ctx.fillStyle = color05;
       
       ctx.beginPath();
       ctx.moveTo(0, canvasHeight * .8);
@@ -87,6 +86,60 @@ const BackgroundDesktop = ({ color01, color02, color03, color04, color06, useIma
       ctx.closePath();
 
       ctx.fill();
+
+      // 06
+      ctx.fillStyle = color06;
+      
+      ctx.beginPath();
+      ctx.moveTo(0, canvasHeight * .8);
+
+      ctx.lineTo(canvasWidth * .25, canvasHeight * .8);
+      ctx.lineTo(canvasWidth * .3, canvasHeight * .86);
+      ctx.lineTo(0, canvasHeight * .86);
+      ctx.closePath();
+
+      ctx.fill();
+
+      // narrow
+      ctx.strokeStyle = color06;
+      ctx.lineWidth = canvasWidth * .002;
+
+      ctx.beginPath();
+      ctx.moveTo(0, canvasHeight * .83);
+
+      ctx.lineTo(canvasWidth * .41, canvasHeight * .83);
+      ctx.lineTo(canvasWidth * .41, canvasHeight * .85);
+      
+      ctx.stroke();
+
+      ctx.fillStyle = color06;
+      
+      ctx.beginPath();
+      ctx.moveTo(canvasWidth * .41, canvasHeight * .845);
+
+      ctx.lineTo(canvasWidth * .417, canvasHeight * .845);
+      ctx.lineTo(canvasWidth * .41, canvasHeight * .86);
+      ctx.lineTo(canvasWidth * .403, canvasHeight * .845);
+      ctx.closePath();
+
+      ctx.fill();
+
+      } else {
+        
+      // 05
+      ctx.fillStyle = color05;
+      
+      ctx.beginPath();
+      ctx.moveTo(0, canvasHeight * .8);
+
+      ctx.lineTo(canvasWidth * .5, canvasHeight * .8);
+      ctx.lineTo(canvasWidth * .7, canvasHeight);
+      ctx.lineTo(0, canvasHeight);
+      ctx.closePath();
+
+      ctx.fill();
+
+      }
     };
 
     const image = new Image();
