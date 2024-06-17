@@ -1,12 +1,25 @@
-## Description
-This tiny project is a test where the objective was to develop a responsive website.
+## Descripción
+
+Este pequeño proyecto es una prueba donde el objetivo era desarrollar una página web responsive.
+
+## Tecnologías Utilizadas
+
+- **JavaScript**
+- **SCSS**
 
 ## Demo
-https://octowebsite.netlify.app
 
-## Design
-https://dribbble.com/shots/19125909-Octo-Website
+Puedes ver una demostración del proyecto en el siguiente enlace:  
+[Octo Website Demo](https://octowebsite.netlify.app)
 
-## Installation
-- `npm run start` — build and launch the project on port 3000.
-- `npm run build` — build the project using Webpack.
+## Diseño
+
+El diseño del proyecto se puede encontrar en Dribbble:  
+[Octo Website Design](https://dribbble.com/shots/19125909-Octo-Website)
+
+## Instalación
+
+Para construir y lanzar el proyecto, utiliza los siguientes comandos:
+
+- `npm run start` — Construye y lanza el proyecto en el puerto 3000.
+- `npm run build` — Construye el proyecto usando Webpack.
